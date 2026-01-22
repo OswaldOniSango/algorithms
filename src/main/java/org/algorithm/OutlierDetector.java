@@ -6,6 +6,10 @@ import java.util.ArrayList;
 public class OutlierDetector {
 
     public static BigDecimal[] detectOutliers(ArrayList<BigDecimal> data) {
+        // Handle empty input
+        if (data.isEmpty()) {
+            return new BigDecimal[0];
+        }
         // Convert the list to an array for easier manipulation
         BigDecimal[] dataArray = new BigDecimal[data.size()];
         dataArray = data.toArray(dataArray);
