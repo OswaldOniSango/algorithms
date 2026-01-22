@@ -60,7 +60,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>${javafx.version}</version>
                 <configuration>
-                    <mainClass>NyquistDiagram2</mainClass> <!-- Cambia esto a tu clase principal -->
+                    <mainClass>NyquistDiagram2</mainClass>
                 </configuration>
                 <executions>
                     <execution>
