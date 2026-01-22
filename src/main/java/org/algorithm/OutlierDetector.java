@@ -5,21 +5,6 @@ import java.util.ArrayList;
 
 public class OutlierDetector {
 
-    public static void main(String[] args) {
-        ArrayList<BigDecimal> data = new ArrayList<>();
-        data.add(BigDecimal.valueOf(9.12));
-        data.add(BigDecimal.valueOf(0.09));
-        data.add(BigDecimal.valueOf(0));
-        data.add(BigDecimal.valueOf(0.105));
-        data.add(BigDecimal.valueOf(0));
-
-        BigDecimal[] outliers = detectOutliers(data);
-        System.out.println("Outliers:");
-        for (BigDecimal outlier : outliers) {
-            System.out.println(outlier);
-        }
-    }
-
     public static BigDecimal[] detectOutliers(ArrayList<BigDecimal> data) {
         // Convert the list to an array for easier manipulation
         BigDecimal[] dataArray = new BigDecimal[data.size()];

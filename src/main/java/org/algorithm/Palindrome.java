@@ -1,18 +1,6 @@
 package org.algorithm;
 
 public class Palindrome {
-    public static void main(String[] args) {
-        String word = "Arriba la birra";
-
-        boolean isPalindrome = isPalindrome(word);
-
-        // print the result
-        if (!isPalindrome) {
-            System.out.println("No es un palíndromo");
-        } else {
-            System.out.println("Es un palíndromo");
-        }
-    }
 
     private static boolean isPalindrome(String word) {
         // Remove spaces and lowercase the letters

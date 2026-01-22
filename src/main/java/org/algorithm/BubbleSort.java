@@ -1,35 +1,8 @@
 package org.algorithm;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class BubbleSort {
-    public static void main (String[] args) {
-        List<Integer> integerList = new ArrayList<>();
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-        integerList.add(new Random().nextInt(100));
-
-        System.out.println("Unordered List:");
-        for (Integer number : integerList) {
-            System.out.println(number);
-        }
-
-        orderListWithMethodBubbleSort(integerList);
-        System.out.println("Ordered List:");
-        for (Integer number : integerList) {
-            System.out.println(number);
-        }
-
-    }
 
     static void orderListWithMethodBubbleSort(List<Integer> integerList) {
         int n = integerList.size();
