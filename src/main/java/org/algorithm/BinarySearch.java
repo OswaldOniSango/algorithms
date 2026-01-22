@@ -15,8 +15,8 @@ public class BinarySearch {
             int middleIndex = getMiddleIndex(startIndex, endIndex);
 
             if (valueToFind == integerList.get(middleIndex)) {
-                // Found the value, return its index
-                return middleIndex;
+                // Found the value
+                return integerList.get(middleIndex);
             } else if (valueToFind > integerList.get(middleIndex)) {
                 // Search in the right half
                 startIndex = middleIndex + 1;
