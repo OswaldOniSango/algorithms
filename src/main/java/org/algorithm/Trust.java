@@ -14,7 +14,7 @@ public class Trust {
         findTrustWorthyGroups(subgroups);
     }
 
-    private static void findTrustWorthyGroups(HashMap<String, Integer> subgroups) {
+    public static void findTrustWorthyGroups(HashMap<String, Integer> subgroups) {
         // Find the maximum value
         int maxValue = 0;
         for (int value : subgroups.values()) {

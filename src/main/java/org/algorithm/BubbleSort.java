@@ -4,7 +4,7 @@ import java.util.List;
 
 public class BubbleSort {
 
-    static void orderListWithMethodBubbleSort(List<Integer> integerList) {
+    public static void orderListWithMethodBubbleSort(List<Integer> integerList) {
         int n = integerList.size();
         int temp;
         boolean swapped;

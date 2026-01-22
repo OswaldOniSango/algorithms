@@ -2,7 +2,7 @@ package org.algorithm;
 
 public class Palindrome {
 
-    private static boolean isPalindrome(String word) {
+    public static boolean isPalindrome(String word) {
         // Remove spaces and lowercase the letters
         String wordProcessed = word.toLowerCase().replaceAll("\\s+", "");
 

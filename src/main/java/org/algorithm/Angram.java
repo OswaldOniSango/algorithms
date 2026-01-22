@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Angram {
 
-    private static boolean isAngram(String word1, String word2) {
+    public static boolean isAngram(String word1, String word2) {
         String cleanWord1 = word1.replaceAll(" ", "").toLowerCase();
         String cleanWord2 = word2.replaceAll(" ", "").toLowerCase();
 

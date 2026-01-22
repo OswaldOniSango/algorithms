@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BinarySearch {
 
-    private static Integer binarySearch(int valueToFind, List<Integer> integerList) {
+    public static Integer binarySearch(int valueToFind, List<Integer> integerList) {
         // Sort the list before searching
         Collections.sort(integerList);
         int startIndex = 0;
