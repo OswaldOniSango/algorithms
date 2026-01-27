@@ -14,6 +14,8 @@ class FibonacciTest {
     @Test
     void returnsCorrectSequenceValues() {
         List<BigDecimal> expectedSequence = List.of(
+            BigDecimal.ZERO,
+            BigDecimal.ONE,
             BigDecimal.ONE,
             new BigDecimal("2"),
             new BigDecimal("3"),

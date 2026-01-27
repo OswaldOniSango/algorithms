@@ -19,15 +19,17 @@ public class Fibonacci {
         }
 
         List<BigDecimal> fibonacciSequence = new ArrayList<>();
-        BigDecimal fistDigit = BigDecimal.ZERO;
+        BigDecimal firstDigit = BigDecimal.ZERO;
         BigDecimal secondDigit = BigDecimal.ONE;
-        BigDecimal fibonacci;
 
-        for (int i = 1; i <= limitNumber; i++) {
-            fibonacci = fistDigit.add(secondDigit);
-            fistDigit = secondDigit;
-            secondDigit = fibonacci;
-            fibonacciSequence.add(fibonacci);
+        fibonacciSequence.add(firstDigit);
+        fibonacciSequence.add(secondDigit);
+
+        while (fibonacciSequence.size() < limitNumber + 2) {
+            BigDecimal next = firstDigit.add(secondDigit);
+            fibonacciSequence.add(next);
+            firstDigit = secondDigit;
+            secondDigit = next;
         }
 
         return fibonacciSequence;
