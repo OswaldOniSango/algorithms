@@ -1,4 +1,3 @@
-// src/test/java/com/oswaldo/algorithms/strings/LongestSubstringWithoutRepeatingTest.java
 package org.algorithm;
 
 import org.junit.jupiter.api.Test;
