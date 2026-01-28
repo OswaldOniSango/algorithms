@@ -1,16 +1,43 @@
+// src/test/java/com/oswaldo/algorithms/strings/LongestSubstringWithoutRepeatingTest.java
 package org.algorithm;
 
 import org.junit.jupiter.api.Test;
 
-public class LongestSubstringWithoutRepeatingTest {
-    @Test
-    void testExampleCases() {
+import static org.junit.jupiter.api.Assertions.*;
 
-        assert LongestSubstringWithoutRepeating.lengthOfLongestSubstring("abcabcbb") == 3;
-        assert LongestSubstringWithoutRepeating.lengthOfLongestSubstring("bbbbb") == 1;
-        assert LongestSubstringWithoutRepeating.lengthOfLongestSubstring("pwwkew") == 3;
-        assert LongestSubstringWithoutRepeating.lengthOfLongestSubstring("") == 0;
-        assert LongestSubstringWithoutRepeating.lengthOfLongestSubstring("au") == 2;
-        assert LongestSubstringWithoutRepeating.lengthOfLongestSubstring("dvdf") == 3;
+class LongestSubstringWithoutRepeatingTest {
+
+    @Test
+    void nullInputThrows() {
+        assertThrows(IllegalArgumentException.class,
+                () -> LongestSubstringWithoutRepeating.lengthOfLongestSubstring(null));
+    }
+
+    @Test
+    void emptyString() {
+        assertEquals(0, LongestSubstringWithoutRepeating.lengthOfLongestSubstring(""));
+    }
+
+    @Test
+    void allSameChar() {
+        assertEquals(1, LongestSubstringWithoutRepeating.lengthOfLongestSubstring("bbbbbb"));
+    }
+
+    @Test
+    void classicCases() {
+        assertEquals(3, LongestSubstringWithoutRepeating.lengthOfLongestSubstring("abcabcbb"));
+        assertEquals(1, LongestSubstringWithoutRepeating.lengthOfLongestSubstring("bbbbb"));
+        assertEquals(3, LongestSubstringWithoutRepeating.lengthOfLongestSubstring("pwwkew"));
+    }
+
+    @Test
+    void includesSpacesAndSymbols() {
+        assertEquals(3, LongestSubstringWithoutRepeating.lengthOfLongestSubstring("a b a"));
+        assertEquals(5, LongestSubstringWithoutRepeating.lengthOfLongestSubstring("ab!@#ab"));
+    }
+
+    @Test
+    void unicodeStillWorksPerCharUnit() {
+        assertEquals(4, LongestSubstringWithoutRepeating.lengthOfLongestSubstring("áéíóá"));
     }
 }
